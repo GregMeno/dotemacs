@@ -8,9 +8,9 @@
       erc-autojoin-mode t
       erc-user-full-name "Brit Butler"
       znc-userpass "yeahright!:tryagainjerks"
-      cmg-userpass "believe:everythingyouread"
-      znc-serv "redlinernotes.com"
-      znc-port 6561)
+      cmg-userpass "gmeno:gmeno"
+      znc-serv "localhost"
+      znc-port 8192)
 
 ; Highlighting and Matches
 (setq erc-current-nick-highlight-type 'nick
@@ -35,19 +35,9 @@
       erc-track-mode t
       erc-track-exclude-types '("JOIN" "PART" "QUIT" "NICK" "MODE"))
 
-(defun stump-irc-notify (matched-type nick msg)
-  "(erc hook) Notify of new IRC messages via stumpish"
-  (when (eq matched-type 'current-nick)
-    ;; I wish there was a good way to tell what buffer the message was coming from
-    ;; but I haven't seen one. Is there a good way to check if I'm *in* that buffer?
-    (stump-add-notification
-     (format "%s:%s" (car (split-string nick "!")) msg))))
-
-(add-hook 'erc-text-matched-hook 'stump-irc-notify)
-
 (defun irc-work ()
   (interactive)
-  (erc-tls :server znc-serv :port znc-port :password cmg-userpass))
+  (erc :server znc-serv :port znc-port :password cmg-userpass))
 
 (defun irc-home ()
   (interactive)

@@ -6,7 +6,7 @@
                          ("ELPA" . "http://tromey.com/elpa/")
                          ("gnu" . "http://elpa.gnu.org/packages/")))
 (package-initialize)
-(package-refresh-contents)
+;(package-refresh-contents)
 
 (defun activate-packages (names)
   (mapcar (lambda (package)
@@ -29,27 +29,22 @@
                      cppcheck
                      tuareg
                      haskell-mode
-                     lua-mode
-                     magit
+                     ;magit
                      gist
                      dpaste
                      lisppaste
-                     refheap
                      color-theme
                      color-theme-solarized
                      color-theme-zenburn
                      color-theme-github
                      full-ack
                      browse-kill-ring
-                     smex
                      undo-tree
-                     regex-tool))
+                     smex))
 
-;; can't wait for emacs 24 + vc-annotate
 ;; new goodies to consider:
 ;; markdown-mode
 ;; perspectives or workgroups?
-;; multi-term?
 ;; find-file-in-project?
 ;; highlight-80+ ... didn't I have something for this, in whitespace.el maybe?
 

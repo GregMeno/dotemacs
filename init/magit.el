@@ -1,3 +1,5 @@
+(add-to-list 'load-path "~/.emacs.d/site-lisp/magit/")
+
 (require 'magit)
 
 (set-face-attribute 'magit-diff-add nil :foreground "Green")
@@ -16,9 +18,5 @@
 
 (define-key magit-log-edit-mode-map (kbd "C-c C-c") 'do-commit)
 
-(when (< emacs-major-version 24)
-  (unless (package-installed-p 'mo-git-blame)
-    (package-install 'mo-git-blame))
-  (autoload 'mo-git-blame-file "mo-git-blame" nil t)
-  (autoload 'mo-git-blame-current "mo-git-blame" nil t)
-  (global-set-key [?\C-x ?v ?g] 'mo-git-blame-current))
+;; For some reason this messed up flymake over tramp... (setq debug-on-quit t) is awesome
+(remove-hook 'find-file-hook 'magithub-try-enabling-minor-mode)

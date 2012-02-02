@@ -23,7 +23,7 @@
 ;; IPython and PDB inserts...
 (defun insert-ipython-shell-call ()
   (interactive)
-  (insert "from pprint import pprint; from IPython.Shell import IPShellEmbed; IPShellEmbed(argv=[])()"))
+  (insert "import IPython; IPython.embed()"))
 
 (defun insert-pdb-call ()
   (interactive)

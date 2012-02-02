@@ -24,7 +24,6 @@
                    "modeline"
                    "ocaml"
                    "paredit"
-                   "pastes"
                    "pgp"
                    "python"
                    "spelling"
@@ -32,9 +31,10 @@
                    "tramp"
                    "whitespace"
                    ; Load order actually matters now...
-                   "slime"
-                   "clojure"
-                   "scheme"
+                   ;"slime"
+                   ;"clojure"
+                   ;"scheme"
                    "notify"
                    "erc"
-                   "jabber"))
+                   ;"jabber"
+                    ))
