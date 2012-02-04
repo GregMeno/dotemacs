@@ -1,5 +1,5 @@
 (when (< emacs-major-version 24)
-  (load "~/emacs/site-lisp/package-23.el"))
+  (load "~/.emacs.d/site-lisp/package-23.el"))
 
 (require 'package)
 (setq package-archives '(("marmalade" . "http://marmalade-repo.org/packages/")
@@ -15,8 +15,6 @@
           names))
 
 (activate-packages '(paredit
-                     clojure-mode
-                     clojurescript-mode
                      elein
                      ipython
                      python-mode
@@ -29,7 +27,7 @@
                      cppcheck
                      tuareg
                      haskell-mode
-                     ;magit
+                     magit
                      gist
                      dpaste
                      lisppaste

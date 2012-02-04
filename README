@@ -1,0 +1,4 @@
+ln -s ~/.emacs.d/init.el ~/.emacs
+
+remember to run 
+M-x package-refresh-contents

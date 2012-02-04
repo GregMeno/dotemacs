@@ -1,7 +1,7 @@
 ;;;; In *most* regrettable fashion, there is still a great divide
 ;;;; between Common Lisp swank/slime and every other implementation.
 ;;;; Will these atrocities ever end?
-(add-to-list 'load-path "~/emacs/site-lisp/slime")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/slime")
 
 ; Quicklisp is awesome...but let's manage this ourselves...
 (require 'slime-autoloads)

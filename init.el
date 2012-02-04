@@ -1,9 +1,9 @@
-(add-to-list 'load-path "~/emacs/site-lisp")
+(add-to-list 'load-path "~/.emacs.d/site-lisp")
 
 (defun expand-and-load (files)
   (mapcar (lambda (name)
             (load-file (expand-file-name
-                        (format "%s/%s.el" "~/emacs/init" name))))
+                        (format "%s/%s.el" "~/.emacs.d/init" name))))
           files))
 
 (expand-and-load '(; make sure all the libraries we know

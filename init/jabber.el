@@ -1,5 +1,5 @@
 ; Load it up
-(add-to-list 'load-path "~/emacs/site-lisp/jabber-mode")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/jabber-mode")
 (require 'jabber)
 
 ; Connections/Basics
